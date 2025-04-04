@@ -70,8 +70,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     await Future.delayed(Duration(seconds: 2));
 
     const mockUsers = [
-      {'username': '8378819787', 'password': 'password123'},
-      {'username': '8378819788', 'password': 'password456'},
+      {'username': '8378819787', 'password': 'abcd1234'},
+      {'username': '8378819788', 'password': 'xyz12345'},
     ];
 
     // Check for valid username and password
