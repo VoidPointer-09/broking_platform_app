@@ -21,7 +21,7 @@ class OrderbookScreen extends StatelessWidget {
                       final order = state.orders[index];
                       return ListTile(
                         title: Text(order["symbol"], style: TextStyle(fontWeight: FontWeight.bold)),
-                        subtitle: Text("Quantity: ${order["quantity"]} | Price: \$${order["price"]}"),
+                        subtitle: Text("Quantity: ${order["quantity"]} | Price: ₹ ${order["price"]}"),
                         trailing: Text(order["status"], style: TextStyle(fontSize: 16, color: Colors.blue)),
                       );
                     },
@@ -60,7 +60,7 @@ class PNLCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text("Realized PNL: ", style: TextStyle(fontSize: 16)),
-                Text("\$${realizedPnl.toStringAsFixed(2)}",
+                Text("₹ ${realizedPnl.toStringAsFixed(2)}",
                     style: TextStyle(fontSize: 16, color: realizedPnl >= 0 ? Colors.green : Colors.red)),
               ],
             ),
@@ -68,7 +68,7 @@ class PNLCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text("Unrealized PNL: ", style: TextStyle(fontSize: 16)),
-                Text("\$${unrealizedPnl.toStringAsFixed(2)}",
+                Text("₹ ${unrealizedPnl.toStringAsFixed(2)}",
                     style: TextStyle(fontSize: 16, color: unrealizedPnl >= 0 ? Colors.green : Colors.red)),
               ],
             ),

@@ -20,8 +20,8 @@ class StockRepository {
     await Future.delayed(Duration(seconds: 1));
     return {
       "orders": [
-        {"symbol": "AAPL", "quantity": 10, "price": 150.0, "status": "Completed"},
-        {"symbol": "GOOGL", "quantity": 5, "price": 2800.0, "status": "Pending"}
+        {"symbol": "TCS", "quantity": 10, "price": 150.0, "status": "Completed"},
+        {"symbol": "INFY", "quantity": 5, "price": 2800.0, "status": "Pending"}
       ],
       "realized_pnl": 120.0,
       "unrealized_pnl": -45.0
@@ -32,11 +32,11 @@ class StockRepository {
     await Future.delayed(Duration(seconds: 1));
     return {
       "positions": [
-        {"symbol": "AAPL", "quantity": 10, "entry_price": 145.0, "current_price": 150.0},
-        {"symbol": "GOOGL", "quantity": 5, "entry_price": 2800.0, "current_price": 2780.0}
+        {"symbol": "TCS", "quantity": 10, "entry_price": 145.0, "current_price": 150.0},
+        {"symbol": "INFY", "quantity": 5, "entry_price": 2800.0, "current_price": 2780.0}
       ],
       "realized_pnl": 75.0,
-      "unrealized_pnl": -25.0
+      "unrealized_pnl": -15.0
     };
   }
 }

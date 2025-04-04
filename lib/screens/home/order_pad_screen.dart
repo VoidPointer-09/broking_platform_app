@@ -5,6 +5,7 @@ class OrderPadScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final Map<String, dynamic> args = ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
     final String orderType = args["type"];
+    final String stockCode = args["stock"];
 
     return Scaffold(
       appBar: AppBar(title: Text(orderType.toUpperCase() + " Order Pad")),
@@ -13,7 +14,7 @@ class OrderPadScreen extends StatelessWidget {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            Text("Stock Symbol: AAPL", style: TextStyle(fontSize: 20)),
+            Text("Stock Symbol: "+ stockCode, style: TextStyle(fontSize: 20)),
             TextField(decoration: InputDecoration(labelText: "Quantity")),
             TextField(decoration: InputDecoration(labelText: "Price")),
             SizedBox(height: 20),
